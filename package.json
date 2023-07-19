@@ -1,0 +1,16 @@
+{
+  "name": "tormenta",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^14.11.0",
+    "puppeteer": "^20.8.1"
+  },
+  "devDependencies": {
+  }
+}
