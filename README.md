@@ -1,7 +1,7 @@
 
 # Tormenta
 
-Tormenta is a Discord bot built to facilitate the dissemination of tropical weather information to enthusiasts and professionals alike.
+Tormenta is a work-in-progress Discord bot built to facilitate the dissemination of tropical weather information to enthusiasts and professionals alike.
 
 
 ## Installation
