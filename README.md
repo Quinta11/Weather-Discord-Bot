@@ -29,9 +29,9 @@ If you have any feedback, comments, or concerns about Tormenta's functionalities
 
 ## Tech Stack
 
-**Client:** JavaScript
+**Client:** JavaScript, Python
 
-**Server:** Node
+**Server:** Node.js
 
 
 ## Acknowledgements
