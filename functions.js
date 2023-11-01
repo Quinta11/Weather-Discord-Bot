@@ -1,3 +1,6 @@
+const axios = require('axios');
+const https = require('https');
+
 // This function converts the user's input for a disturbance to its alternate form, works both ways.
 let convertIdentifier = async (identifier) => {
     let result = 'Unknown';
@@ -124,10 +127,23 @@ let fixCoords = async (unfixedCoord) => {
     return fixedCoord
 }
 
+// This function checks to ensure that the URL being called actually exists; useful for catching errors.
+let checkUrlExists = async (url) => {
+    try {
+        const response = await axios.head(url, {
+            httpsAgent: new https.Agent({ rejectUnauthorized: false }),
+            timeout: 1500, // Adjust the timeout as needed
+        });
+        return response.status === 200;
+    } catch (error) {
+        return false; // An error means the URL does not exist or is inaccessible
+    }
+}
+
 module.exports = {
     convertIdentifier,
     selectClassification,
     selectThumbnail,
     fixCoords,
-    
+    checkUrlExists,
 }

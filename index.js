@@ -41,9 +41,9 @@ client.on(Events.InteractionCreate, async interaction => {
 	} catch (error) {
 		console.error(error);
 		if (interaction.replied || interaction.deferred) {
-			await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
+			//await interaction.followUp({ content: 'There was an error while executing this command!', ephemeral: true });
 		} else {
-			await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
+			//await interaction.reply({ content: 'There was an error while executing this command!', ephemeral: true });
 		}
 	}
 });
@@ -56,3 +56,13 @@ client.once(Events.ClientReady, c => {
 
 // Log in to Discord with your client's token
 client.login(token);
+
+client.on('ready', async () => {
+	await client.channels.cache.get("1128136640947310783").send("**NOTICE: Tormenta has launched.**")
+})
+
+process.on('SIGINT', async () => {
+    console.log("Shutting down due to manual input.");
+	await client.channels.cache.get("1128136640947310783").send("**NOTICE: Shutting down due to manual input.**");
+    process.exit(0);
+});

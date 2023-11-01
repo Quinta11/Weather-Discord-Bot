@@ -29,17 +29,18 @@ If you have any feedback, comments, or concerns about Tormenta's functionalities
 
 ## Tech Stack
 
-**Client:** JavaScript
+**Client:** JavaScript, Python
 
 **Server:** Node
 
 
 ## Acknowledgements
 
- - [The Cooperative Institute for Meteorological Satellite Studies' products](https://tropic.ssec.wisc.edu/tropic.php)
- - [The National Hurricane Center's products](https://www.nhc.noaa.gov/)
+  - [The Cooperative Institute for Meteorological Satellite Studies' products](https://tropic.ssec.wisc.edu/tropic.php)
+  - [The National Hurricane Center's products](https://www.nhc.noaa.gov/)
   - [The Automated Tropical Cyclone Forecasting System's B-Deck](https://ftp.nhc.noaa.gov/atcf/btk/)
   - [discord.js](https://discord.js.org/)
+  - [Tropycal](https://tropycal.github.io/tropycal/index.html#)
 
 
 

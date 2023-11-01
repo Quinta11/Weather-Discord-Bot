@@ -1,14 +1,15 @@
 const puppeteer = require('puppeteer');
+const year = new Date().getUTCFullYear();
 
 // Grabs the latest best track information for specified disturbance.
 // Used in the following command: /btk
 let scraper = async (identifier) => {
     const browser = await puppeteer.launch({headless: "new"});
     const page = await browser.newPage();
-    if((identifier.substr(0,2).toLowerCase() == 'al') || (identifier.substr(0,2).toLowerCase() == 'ep')) {
-        await page.goto(`https://ftp.nhc.noaa.gov/atcf/btk/b${identifier}2023.dat`);
+    if((identifier.substr(0,2).toLowerCase() == 'al')/* || (identifier.substr(0,2).toLowerCase() == 'ep')*/) { //Commented out because JTWC apparently copies EP BT data as-is
+        await page.goto(`https://ftp.nhc.noaa.gov/atcf/btk/b${identifier}${year}.dat`);
     } else {
-        await page.goto(`https://www.ssd.noaa.gov/PS/TROP/DATA/ATCF/JTWC/b${identifier}2023.dat`);
+        await page.goto(`https://www.ssd.noaa.gov/PS/TROP/DATA/ATCF/JTWC/b${identifier}${year}.dat`);
     }
 
     let texts = await page.evaluate(() => {

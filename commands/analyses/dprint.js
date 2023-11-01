@@ -17,7 +17,8 @@ module.exports = {
     // Runs when user inputs command
 	async execute(interaction) {
         await interaction.deferReply();
-        
+        console.log(`/dprint initiated by ${interaction.user.username}.`);
+
         let identifier = interaction.options.getString('identifier');
         let altIdentifier = await func.convertIdentifier(identifier);
         let rand = Math.random().toString(36).slice(2);
@@ -30,11 +31,11 @@ module.exports = {
 	        .setColor(0x0099FF)
 	        .setTitle(`Latest D-PRINT estimation for ${altIdentifier.toUpperCase()}`)
 	        .addFields(
-                { name: 'Average:', value: `${data[2]}`, inline: true },
-                { name: '25th Percentile:', value: `${data[3]}`, inline: true },
-                { name: '75th Percentile:', value: `${data[4]}`, inline: true},
+                { name: 'Average:', value: `${data[3]}`, inline: true },
+                { name: '25th Percentile:', value: `${data[4]}`, inline: true },
+                { name: '75th Percentile:', value: `${data[5]}`, inline: true},
 	        )
-	        .setImage(`${data[5]}?${rand}`)
+	        .setImage(`${data[6]}?${rand}`)
             .setFooter({ text: `Valid as of ${data[0]}, ${data[1]}` });
 
         // Button information
@@ -50,6 +51,6 @@ module.exports = {
             embeds: [embed], 
             components: [row]
         });
-        console.log(`/dprint ran successfully by ${interaction.user.username}.`);
+        console.log(`/dprint ran successfully.`);
 	},
 };

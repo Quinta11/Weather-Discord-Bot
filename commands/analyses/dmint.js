@@ -30,11 +30,11 @@ module.exports = {
 	        .setTitle(`Latest D-MINT estimation for ${altIdentifier.toUpperCase()}`)
 	        .addFields(
 		        { name: 'Microwave Sensor:', value: `${data[2]}`},
-                { name: 'Average:', value: `${data[3]}`, inline: true },
-                { name: '25th Percentile:', value: `${data[4]}`, inline: true },
-                { name: '75th Percentile:', value: `${data[5]}`, inline: true},
+                { name: 'Average:', value: `${data[4]}`, inline: true },
+                { name: '25th Percentile:', value: `${data[5]}`, inline: true },
+                { name: '75th Percentile:', value: `${data[6]}`, inline: true},
 	        )
-	        .setImage(`${data[6]}?${rand}`)
+	        .setImage(`${data[7]}?${rand}`)
             .setFooter({ text: `Valid as of ${data[0]}, ${data[1]}` });
 
         // Button information
