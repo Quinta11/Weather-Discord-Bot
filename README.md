@@ -1,30 +1,30 @@
 
-# Tormenta
+# Weather Discord Bot
 
-Tormenta is a work-in-progress Discord bot built to facilitate the dissemination of tropical weather information to enthusiasts and professionals alike.
+This Weather Discord Bot is a work-in-progress Discord bot built to facilitate the dissemination of tropical weather information to enthusiasts and professionals alike. This is a personal project that I work on in my free time as programming practice.
 
 
 ## Installation
 
-A Discord link to invite Tormenta will be available at a later date.
+A Discord link to invite this bot will be available at a later date, but the code used to provide the bot functionalities is available in this repository.
     
-## Features
+## Features Implemented
 
 - Real-time objective and subjective satellite estimations
 - Best track information for all active cyclones
 - Summarized cyclone information provided by the Automated Tropical Cyclone Forecasting System's sector file
 - Official RMSC products and links
-- More coming soon!
+- Various other features
 
 
 ## Documentation
 
-Documentation for Tormenta will be available at a later date.
+Documentation for this bot will be available at a later date.
 
 
 ## Feedback
 
-If you have any feedback, comments, or concerns about Tormenta's functionalities, please reach out via email at adrianq1202@gmail.com.
+If you have any feedback, comments, or concerns about this bot's functionalities, please reach out via email at adrianq1202@gmail.com.
 
 
 ## Tech Stack
